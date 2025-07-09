@@ -1,5 +1,3 @@
-console.log("______________ DAY - 06 TAsk __________________");
-
 // 1. Write a Function to Convert Celsius to Fahrenheit
 const celsiusToFahrenheit = (celsius) => (fahrenheit = (celsius * 9) / 5 + 32);
 const result = celsiusToFahrenheit(100);
