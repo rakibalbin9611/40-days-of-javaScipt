@@ -53,7 +53,7 @@ console.log(tapaScriptAccount.withdraw(50));
 console.log(tapaScriptAccount.withdraw(20));
 console.log(tapaScriptAccount.checkBalance());
 
-// ________Timer Example________
+// ________Timer Example_________
 function timer() {
   let secs = 0;
 
