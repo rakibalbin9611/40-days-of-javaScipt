@@ -4,7 +4,7 @@ function sayName() {
   console.log(this.name);
 }
 
-// ----------------------------------------------
+// -----------------------------------------------
 var name = "tom";
 function tom() {
   console.log(this.name);
