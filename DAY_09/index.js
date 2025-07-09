@@ -15,7 +15,7 @@ console.log("Name is", name);
   // === name variable's TDZ start here
   //
   //
-  console.log(name); // Refference Error
+  console.log(name); // Refference Errorr
   //
   //
   //
