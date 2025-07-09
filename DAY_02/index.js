@@ -1,4 +1,3 @@
-// This is a small change for DAY_02
 //  Task Assignment :
 
 /* 1️⃣  Original values */
