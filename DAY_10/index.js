@@ -7,7 +7,7 @@ function sayName() {
 
 sayName();
 
-console.log(name); // tapas
+console.log(name); // tapass
 
 // Function Scope
 function toDo() {
