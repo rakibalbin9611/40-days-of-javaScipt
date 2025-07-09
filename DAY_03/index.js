@@ -1,5 +1,3 @@
-console.log("DAY 03");
-
 let count = 5;
 console.log(count++); //5
 console.log(count); //6
