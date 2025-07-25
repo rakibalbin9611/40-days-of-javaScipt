@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: #f4f6f9;
+        padding: 40px;
+        color: #333;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #2c3e50;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #fff;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      th,
+      td {
+        padding: 15px 20px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #2c3e50;
+        color: #fff;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f8f9fa;
+      }
+
+      tr:hover {
+        background-color: #ecf0f1;
+      }
+
+      code {
+        background-color: #e8e8e8;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: Consolas, monospace;
+      }
+
+      .nowrap {
+        white-space: nowrap;
+      }
+    </style>
+    <script defer src="./index.js"></script>
+    <script defer src="./example.js"></script>
+    <script defer src="./task.js"></script>
+  </head>
+  <body>
+    <h1>40 Days of javaScript : DAY-13</h1>
+
+    <h2>JavaScript <code>this</code> — Normal vs Arrow Function</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Situation</th>
+          <th class="nowrap">Function Type</th>
+          <th>Value of <code>this</code></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Global Scope (non-strict)</td>
+          <td>Normal</td>
+          <td><code>window</code></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Global Scope (strict)</td>
+          <td>Normal</td>
+          <td><code>undefined</code></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Global Scope</td>
+          <td>Arrow</td>
+          <td>Inherits from outer scope (<code>window</code>)</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Inside Object Method</td>
+          <td>Normal</td>
+          <td>Refers to the object itself</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Inside Object Method</td>
+          <td>Arrow</td>
+          <td>Inherits from outer scope, not the object</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Standalone Function (non-method)</td>
+          <td>Normal</td>
+          <td>
+            <code>window</code> (non-strict) / <code>undefined</code> (strict)
+          </td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Standalone Function (non-method)</td>
+          <td>Arrow</td>
+          <td>Inherits from enclosing lexical scope</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Constructor Function</td>
+          <td>Normal</td>
+          <td>Refers to newly created object</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Constructor Function</td>
+          <td>Arrow</td>
+          <td>
+            <code>this</code> is inherited — likely <code>undefined</code> or
+            global
+          </td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Inside <code>setTimeout</code> / Event Handler</td>
+          <td>Normal</td>
+          <td><code>window</code> or DOM element (depends on context)</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Inside <code>setTimeout</code> / Event Handler</td>
+          <td>Arrow</td>
+          <td>Inherits from outer lexical scope</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
