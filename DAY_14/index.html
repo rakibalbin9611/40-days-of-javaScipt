@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-14</title>
+    <script defer src="./index.js"></script>
+    <script defer src="./task.js"></script>
+    <style>
+      body {
+        background-color: tomato;
+      }
+      <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f8;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      background: #fff;
+    }
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #007BFF;
+      color: white;
+    }
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+    code {
+      background: #eef;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
+    </style>
+  </head>
+  <body>
+    <h1>40 Days of javaScript : DAY-14</h1>
+    <h2>JavaScript Error Handling Keywords</h2>
+
+    <table>
+      <tr>
+        <th>Keyword</th>
+        <th>Usage</th>
+        <th>Example</th>
+      </tr>
+      <tr>
+        <td><code>try</code></td>
+        <td>
+          Wraps code that may throw an error. If error occurs, control jumps to
+          <code>catch</code>.
+        </td>
+        <td>
+          <code>try { riskyCode(); }</code>
+        </td>
+      </tr>
+      <tr>
+        <td><code>catch</code></td>
+        <td>Handles the error thrown in the <code>try</code> block.</td>
+        <td>
+          <code>catch(err) { console.log(err); }</code>
+        </td>
+      </tr>
+      <tr>
+        <td><code>throw</code></td>
+        <td>Used to manually throw a custom error or object.</td>
+        <td>
+          <code>throw new Error("Something went wrong");</code>
+        </td>
+      </tr>
+      <tr>
+        <td><code>rethrow</code></td>
+        <td>Throw the error again after partially handling it.</td>
+        <td>
+          <code>catch(e) { if (!e.known) throw e; }</code>
+        </td>
+      </tr>
+      <tr>
+        <td><code>Error Object</code></td>
+        <td>Provides information about the error (name, message, stack).</td>
+        <td>
+          <code>err.name, err.message, err.stack</code>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
