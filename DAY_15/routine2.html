@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Routine - Tuition Day</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to right, #fff3e0, #ffffff);
+        margin: 0;
+        padding: 40px 20px;
+      }
+
+      .routine-container {
+        max-width: 800px;
+        margin: auto;
+        background-color: #fff8f0;
+        border-radius: 20px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        overflow: hidden;
+        padding: 30px;
+      }
+
+      .title {
+        text-align: center;
+        font-size: 36px;
+        color: #bf360c;
+        margin-bottom: 10px;
+      }
+
+      .note {
+        text-align: center;
+        font-size: 18px;
+        color: #6d4c41;
+        font-style: italic;
+        margin-bottom: 30px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      thead {
+        background-color: #ff7043;
+        color: white;
+      }
+
+      th,
+      td {
+        padding: 22px;
+        text-align: center;
+        font-size: 20px;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: #ffe0b2;
+      }
+
+      tbody tr:hover {
+        background-color: #ffd8b2;
+        transition: background-color 0.3s;
+      }
+
+      tfoot td {
+        background-color: #ffe0b2;
+        font-weight: bold;
+        font-size: 22px;
+        color: #d84315;
+      }
+
+      @media (max-width: 768px) {
+        .title {
+          font-size: 28px;
+        }
+
+        th,
+        td {
+          padding: 16px;
+          font-size: 18px;
+        }
+
+        .note {
+          font-size: 16px;
+        }
+
+        tfoot td {
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="routine-container">
+      <div class="title">📘 Study Routine (Tuition Day)</div>
+      <div class="note">
+        * This routine is followed on days when I have tuition *
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Activity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>9:30 AM - 12:30 PM</td>
+            <td>Morning Study</td>
+          </tr>
+          <tr>
+            <td>1:00 PM - 3:00 PM</td>
+            <td>Afternoon Study</td>
+          </tr>
+          <tr>
+            <td>5:30 PM - 6:30 PM</td>
+            <td>Evening Study</td>
+          </tr>
+          <tr>
+            <td>10:00 PM - 11:00 PM</td>
+            <td>Late Night Study</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">🕒 Total Study Time: <strong>7 Hours</strong></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </body>
+</html>
