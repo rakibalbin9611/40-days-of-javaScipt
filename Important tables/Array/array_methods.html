@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Array Methods – Reference Table</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #f9fafc;
+        padding: 40px;
+        color: #333;
+      }
+
+      h2 {
+        text-align: center;
+        background: linear-gradient(to right, #8e44ad, #3498db);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 2em;
+        margin-bottom: 30px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      thead {
+        background: linear-gradient(to right, #16a085, #27ae60);
+        color: white;
+      }
+
+      th,
+      td {
+        padding: 16px 20px;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      tbody tr:nth-child(odd) {
+        background: #f0f9ff;
+      }
+
+      tbody tr:nth-child(even) {
+        background: #ffffff;
+      }
+
+      tbody tr:hover {
+        background: #e3f2fd;
+      }
+
+      code {
+        background: #fff5cc;
+        color: #c0392b;
+        padding: 3px 6px;
+        border-radius: 5px;
+        font-family: Consolas, monospace;
+        font-size: 14px;
+      }
+
+      th {
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-size: 14px;
+      }
+
+      td {
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      /* PRINT STYLES */
+      @media print {
+        body {
+          background: white;
+          padding: 0;
+          color: black;
+        }
+
+        table {
+          box-shadow: none;
+          border: 1px solid #aaa;
+        }
+
+        thead {
+          background: #16a085 !important;
+          color: white !important;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+
+        tbody tr:nth-child(odd) {
+          background: #f0f0f0 !important;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+
+        tbody tr:hover {
+          background: none !important;
+        }
+
+        code {
+          background: #eee !important;
+          color: black;
+        }
+
+        h2 {
+          color: black !important;
+          -webkit-text-fill-color: black !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>JavaScript Array Methods</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Array Method</th>
+          <th>Description</th>
+          <th>Syntax</th>
+          <th>Use Case</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>length</td>
+          <td>Returns the number of elements.</td>
+          <td><code>array.length</code></td>
+          <td><code>[1,2,3].length // 3</code></td>
+        </tr>
+        <tr>
+          <td>toString()</td>
+          <td>Converts array to string.</td>
+          <td><code>array.toString()</code></td>
+          <td><code>[1,2,3].toString() // "1,2,3"</code></td>
+        </tr>
+        <tr>
+          <td>at()</td>
+          <td>Returns element at index.</td>
+          <td><code>array.at(index)</code></td>
+          <td><code>[10,20,30].at(-1) // 30</code></td>
+        </tr>
+        <tr>
+          <td>join()</td>
+          <td>Joins elements with a separator.</td>
+          <td><code>array.join(separator)</code></td>
+          <td><code>["a","b"].join("-") // "a-b"</code></td>
+        </tr>
+        <tr>
+          <td>pop()</td>
+          <td>Removes last element.</td>
+          <td><code>array.pop()</code></td>
+          <td><code>[1,2,3].pop() // 3</code></td>
+        </tr>
+        <tr>
+          <td>push()</td>
+          <td>Adds elements to the end.</td>
+          <td><code>array.push(item)</code></td>
+          <td><code>[1,2].push(3) // [1,2,3]</code></td>
+        </tr>
+        <tr>
+          <td>shift()</td>
+          <td>Removes first element.</td>
+          <td><code>array.shift()</code></td>
+          <td><code>[1,2,3].shift() // 1</code></td>
+        </tr>
+        <tr>
+          <td>unshift()</td>
+          <td>Adds elements to the start.</td>
+          <td><code>array.unshift(item)</code></td>
+          <td><code>[2,3].unshift(1) // [1,2,3]</code></td>
+        </tr>
+        <tr>
+          <td>delete</td>
+          <td>Deletes item at index (leaves empty).</td>
+          <td><code>delete array[index]</code></td>
+          <td><code>delete [1,2,3][1] // [1, empty, 3]</code></td>
+        </tr>
+        <tr>
+          <td>concat()</td>
+          <td>Merges arrays.</td>
+          <td><code>array1.concat(array2)</code></td>
+          <td><code>[1,2].concat([3,4]) // [1,2,3,4]</code></td>
+        </tr>
+        <tr>
+          <td>copyWithin()</td>
+          <td>Copies part of array internally.</td>
+          <td><code>array.copyWithin(target, start, end)</code></td>
+          <td><code>[1,2,3,4].copyWithin(1,2) // [1,3,4,4]</code></td>
+        </tr>
+        <tr>
+          <td>flat()</td>
+          <td>Flattens nested arrays.</td>
+          <td><code>array.flat(depth)</code></td>
+          <td><code>[1,[2,[3]]].flat(2) // [1,2,3]</code></td>
+        </tr>
+        <tr>
+          <td>slice()</td>
+          <td>Returns shallow copy of portion.</td>
+          <td><code>array.slice(start, end)</code></td>
+          <td><code>[1,2,3,4].slice(1,3) // [2,3]</code></td>
+        </tr>
+        <tr>
+          <td>splice()</td>
+          <td>Modifies array by removing/replacing.</td>
+          <td><code>array.splice(start, deleteCount, ...items)</code></td>
+          <td><code>[1,2,3].splice(1,1,4) // [1,4,3]</code></td>
+        </tr>
+        <tr>
+          <td>toSpliced()</td>
+          <td>Non-destructive version of splice.</td>
+          <td><code>array.toSpliced(start, deleteCount, ...items)</code></td>
+          <td><code>[1,2,3].toSpliced(1,1,4) // [1,4,3]</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
